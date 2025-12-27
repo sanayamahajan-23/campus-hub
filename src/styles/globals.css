@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  padding-top:80px;
+}
+
+h1, h2, h3 {
+  color: #f9fafb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  color: #cbd5f5;
+}
+/* Prevent canvas overflow */
+.chart-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.chart-wrapper canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.dashboard-grid > * {
+  min-width: 0; /* allow grid items to shrink on mobile */
+}
+
+
+/* Prevent body-level overflow issues */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes pulse {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  p  { font-size: 0.85rem; }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
